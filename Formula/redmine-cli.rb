@@ -5,20 +5,20 @@
 class RedmineCli < Formula
   desc "Redmine CLI - Redmine REST API を操作する CLI ツール"
   homepage "https://github.com/chippy-ao/redmine-cli"
-  version "2.1.0"
+  version "2.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chippy-ao/redmine-cli/releases/download/v2.1.0/redmine-cli_darwin_amd64.tar.gz"
-      sha256 "3bcc21f3ef0a3003903e6510b6fcc9fcab53c066da4e2ad67d1f8ec78b9dff53"
+      url "https://github.com/chippy-ao/redmine-cli/releases/download/v2.2.0/redmine-cli_darwin_amd64.tar.gz"
+      sha256 "078033657dc830489287dbcc7bc8bc28af98a490b2903af5988a48e4279874c3"
 
       define_method(:install) do
         bin.install "redmine-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chippy-ao/redmine-cli/releases/download/v2.1.0/redmine-cli_darwin_arm64.tar.gz"
-      sha256 "cbbc12683272accf335eb3d2f80c60c80e935c49a250a23f0918cdb5161f7149"
+      url "https://github.com/chippy-ao/redmine-cli/releases/download/v2.2.0/redmine-cli_darwin_arm64.tar.gz"
+      sha256 "7920a40484593e2b160264a3f460d7943b35f5637ca1765cd3a37d9abb604090"
 
       define_method(:install) do
         bin.install "redmine-cli"
@@ -28,15 +28,15 @@ class RedmineCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chippy-ao/redmine-cli/releases/download/v2.1.0/redmine-cli_linux_amd64.tar.gz"
-      sha256 "d1125a97bf03f7d181a8efbbb84f19181c2711fff2f6f8dc2d24bb32272d8031"
+      url "https://github.com/chippy-ao/redmine-cli/releases/download/v2.2.0/redmine-cli_linux_amd64.tar.gz"
+      sha256 "1696a99daa092fa486292b83fe68a7b56867ce2a556557dbe5a00a12e2967fb3"
       define_method(:install) do
         bin.install "redmine-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chippy-ao/redmine-cli/releases/download/v2.1.0/redmine-cli_linux_arm64.tar.gz"
-      sha256 "1afa13fd3121111bd6dbf503bd407053ac3612eda877d78b2664a5e85268a5ca"
+      url "https://github.com/chippy-ao/redmine-cli/releases/download/v2.2.0/redmine-cli_linux_arm64.tar.gz"
+      sha256 "af59bffd1b26be226f08b83cfdebecb165f746f71a8fb89cb3de3182c3f2afdc"
       define_method(:install) do
         bin.install "redmine-cli"
       end
